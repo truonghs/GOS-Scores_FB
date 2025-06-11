@@ -1,4 +1,4 @@
-# My G-Weather-Forecast (Front-End)
+# My [GOS-Scores](https://gos-scores-fe.vercel.app/) (Front-End)
 ![image](https://github.com/user-attachments/assets/7b4af618-037d-4f71-a214-2f27cde90102)
 
 Welcome to G-Weather-Forecast. This is an application built using Create React App. Please follow the following introduction to get the project up and running!
@@ -14,7 +14,7 @@ Welcome to G-Weather-Forecast. This is an application built using Create React A
 ### Requirements
 Make sure your device has the following installed or install them before we continue:
 - [Node.js](https://nodejs.org/) (v16 or higher)
-- [npm](https://www.npmjs.com/) (comes with Node.js) or [Yarn](https://classic.yarnpkg.com/)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 - [git](https://git-scm.com/)
 
 ## Installation
