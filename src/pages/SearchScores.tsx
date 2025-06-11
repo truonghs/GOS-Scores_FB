@@ -5,9 +5,7 @@ import { icons } from "@/utils";
 import { Button, Input, message, Table } from "antd";
 import { useState } from "react";
 
-type Props = {};
-
-export const SearchScores = (props: Props) => {
+export const SearchScores = () => {
   const [Sbd, setSbd] = useState<string>("");
   const [scoresData, setScoresData] = useState<IScores | undefined>();
   const windowSize = useWindowSize();
