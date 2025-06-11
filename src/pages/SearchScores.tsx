@@ -23,6 +23,7 @@ export const SearchScores = () => {
         }
       });
     } else {
+      setScoresData(undefined);
       message.error("Registration number can not be empty!");
     }
   };
