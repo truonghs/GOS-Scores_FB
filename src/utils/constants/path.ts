@@ -1,6 +1,6 @@
 export const PATH = {
-  dashboard: "/",
-  search: "/search-scores",
+  dashboard: "/dashboard",
+  search: "/",
   reports: "/reports",
   settings: "/settings",
 };

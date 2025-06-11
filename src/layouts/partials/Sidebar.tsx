@@ -22,6 +22,8 @@ export const Sidebar: React.FC<Props> = ({ children }) => {
       key: PATH.dashboard,
       icon: icons.dashboard,
       label: "Dashboard",
+      disabled: true,
+
       onClick: () => navigate(PATH.dashboard),
     },
     {

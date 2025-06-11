@@ -8,10 +8,10 @@ export const router = createBrowserRouter([
     path: "/",
     element: <DefaultLayout />,
     children: [
-      {
-        path: PATH.dashboard,
-        element: <Dashboard />,
-      },
+      // {
+      //   path: PATH.dashboard,
+      //   element: <Dashboard />,
+      // },
       {
         path: PATH.search,
         element: <SearchScores />,
@@ -20,10 +20,10 @@ export const router = createBrowserRouter([
         path: PATH.reports,
         element: <Reports />,
       },
-      {
-        path: PATH.settings,
-        element: <Setting />,
-      },
+      // {
+      //   path: PATH.settings,
+      //   element: <Setting />,
+      // },
     ],
   },
 ]);
