@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# My [GOS-Scores](https://gos-scores-fe.vercel.app/) (Front-End)
+![image](https://github.com/user-attachments/assets/7b4af618-037d-4f71-a214-2f27cde90102)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to G-Weather-Forecast. This is an application built using Create React App. Please follow the following introduction to get the project up and running!
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Settings](#settings)
+- [Run the Project](#run-the-project)
+- [Deployment](#deployment)
 
-## Expanding the ESLint configuration
+### Requirements
+Make sure your device has the following installed or install them before we continue:
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [git](https://git-scm.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/truonghs/GOS-Scores_FE.git
+    ```
+
+2. Navigate into the project directory:
+
+    ```bash
+    cd gos-scores_fe
+    ```
+
+3. Install the project dependencies:
+
+    Using npm:
+
+    ```bash
+    npm install
+    ```
+
+## Settings
+Add environment variables.\
+At the root of the project, create a .env file and add the following environment variables
+```
+REACT_APP_SERVER_URL = your_server_url
+```
+- Replace your_server_url with your actual server URL.
+## Run the Project
+
+To start the development server and run the project locally, use the following command:
+
+Using npm:
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+The website is deployed with Vercel: [GOS-Scores](https://gos-scores-fe.vercel.app/)
+- Due to the limitations of the free service in the server-side deployment platform, it will take some time for the **first request**. Please be patient!
