@@ -1,5 +1,5 @@
 import { DefaultLayout } from "@/layouts";
-import { Dashboard, Reports, SearchScores, Setting } from "@/pages";
+import { Reports, SearchScores } from "@/pages";
 import { PATH } from "@/utils";
 import { createBrowserRouter } from "react-router-dom";
 
