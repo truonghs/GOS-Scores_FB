@@ -8,7 +8,7 @@ import { useState } from "react";
 type Props = {};
 
 export const SearchScores = (props: Props) => {
-  const [Sbd, setSbd] = useState("");
+  const [Sbd, setSbd] = useState<string>("");
   const [scoresData, setScoresData] = useState<IScores | undefined>();
   const windowSize = useWindowSize();
 
@@ -93,7 +93,7 @@ export const SearchScores = (props: Props) => {
         <div className="md:text-xl text-base ">Registration Number</div>
         <div className="flex w-full gap-4  items-center">
           <Input className="" type="text" placeholder="Enter registration number" size="large" value={Sbd} onChange={(e) => setSbd(e.target.value)} />
-          <Button size={"large"} color="default" variant="solid" onClick={fetchScores}>
+          <Button size={"large"} color="green" variant="solid" onClick={fetchScores}>
             {windowSize.width > 640 ? "Submit" : icons.check}
           </Button>
         </div>

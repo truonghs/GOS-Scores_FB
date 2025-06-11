@@ -40,6 +40,7 @@ export const Sidebar: React.FC<Props> = ({ children }) => {
       key: PATH.settings,
       icon: icons.settings,
       label: "Settings",
+      disabled: true,
       onClick: () => navigate(PATH.settings),
     },
   ];

@@ -7,4 +7,7 @@ export const scoresApi = {
   getStatistics: async () => {
     return await axiosClient.get("/scores/statistics");
   },
+  getTopGroupA: async () => {
+    return await axiosClient.get("/scores/top-group-a");
+  },
 };

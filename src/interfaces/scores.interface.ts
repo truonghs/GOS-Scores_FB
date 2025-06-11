@@ -12,3 +12,11 @@ export interface IScores {
   gdcd: number;
   ma_ngoai_ngu: string;
 }
+export interface IScoresOnTopGroupA {
+  id: number;
+  sbd: string;
+  toan: number;
+  vat_li: number;
+  hoa_hoc: number;
+  total: number;
+}
