@@ -2,7 +2,7 @@ import { instance as axiosClient } from "@/configs";
 
 export const scoresApi = {
   getScores: async (sdb: string) => {
-    return await axiosClient.get(`/scores/sbd/${sdb}`);
+    return await axiosClient.get(`/students/sbd/${sdb}`);
   },
   getStatistics: async () => {
     return await axiosClient.get("/scores/statistics");
