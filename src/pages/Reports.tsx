@@ -51,7 +51,7 @@ export function Reports() {
     },
     {
       title: "SBD",
-      dataIndex: "sbd",
+      dataIndex: ["student", "sbd"],
       key: "sbd",
       render: (text, _, index) => <span style={index < 3 ? { fontWeight: 600 } : {}}>{text}</span>,
     },

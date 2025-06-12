@@ -1,6 +1,26 @@
-export interface IScores {
+export interface IStudent {
   id: number;
   sbd: string;
+  ma_ngoai_ngu: string;
+}
+export interface IStudentWithScores {
+  sbd: string;
+  ho_ten: string;
+  ma_ngoai_ngu: string;
+  scores: {
+    toan: number | null;
+    ngu_van: number | null;
+    ngoai_ngu: number | null;
+    vat_li: number | null;
+    hoa_hoc: number | null;
+    sinh_hoc: number | null;
+    lich_su: number | null;
+    dia_li: number | null;
+    gdcd: number | null;
+  };
+}
+export interface IScores {
+  id: number;
   toan: number;
   ngu_van: number;
   ngoai_ngu: number;
@@ -10,8 +30,9 @@ export interface IScores {
   lich_su: number;
   dia_li: number;
   gdcd: number;
-  ma_ngoai_ngu: string;
+  student: IStudent;
 }
+
 export interface IScoresOnTopGroupA {
   id: number;
   sbd: string;

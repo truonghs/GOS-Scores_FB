@@ -1,13 +1,14 @@
 import { scoresApi } from "@/apis/scores.api";
 import { useApi, useWindowSize } from "@/hooks";
-import { IScores } from "@/interfaces";
+import { IStudentWithScores } from "@/interfaces";
 import { icons } from "@/utils";
 import { Button, Input, message, Table } from "antd";
+import { ColumnsType } from "antd/es/table";
 import { useState } from "react";
 
 export const SearchScores = () => {
   const [Sbd, setSbd] = useState<string>("");
-  const [scoresData, setScoresData] = useState<IScores | undefined>();
+  const [scoresData, setScoresData] = useState<IStudentWithScores | undefined>();
   const windowSize = useWindowSize();
 
   const { loading: callScoresApiLoading, callApi: callScoresApi } = useApi<void>();
@@ -28,63 +29,64 @@ export const SearchScores = () => {
     }
   };
 
-  const columns = [
+  const columns: ColumnsType<IStudentWithScores> = [
     {
-      title: "SBD",
+      title: "Số Báo Danh",
       dataIndex: "sbd",
       key: "sbd",
     },
     {
-      title: "Toan",
-      dataIndex: "toan",
+      title: "Toán",
       key: "toan",
+      render: (_, record) => record.scores?.toan,
     },
     {
-      title: "Ngu van",
-      dataIndex: "ngu_van",
+      title: "Ngữ văn",
       key: "ngu_van",
+      render: (_, record) => record.scores?.ngu_van,
     },
     {
-      title: "Ngoai ngu",
-      dataIndex: "ngoai_ngu",
+      title: "Ngoại ngữ",
       key: "ngoai_ngu",
+      render: (_, record) => record.scores?.ngoai_ngu,
     },
     {
-      title: "Vat li",
-      dataIndex: "vat_li",
+      title: "Vật lí",
       key: "vat_li",
+      render: (_, record) => record.scores?.vat_li,
     },
     {
-      title: "Hoa hoc",
-      dataIndex: "hoa_hoc",
+      title: "Hóa học",
       key: "hoa_hoc",
+      render: (_, record) => record.scores?.hoa_hoc,
     },
     {
-      title: "Sinh hoc",
-      dataIndex: "sinh_hoc",
+      title: "Sinh học",
       key: "sinh_hoc",
+      render: (_, record) => record.scores?.sinh_hoc,
     },
     {
-      title: "Lich su",
-      dataIndex: "lich_su",
+      title: "Lịch sử",
       key: "lich_su",
+      render: (_, record) => record.scores?.lich_su,
     },
     {
-      title: "Dia li",
-      dataIndex: "Dia_li",
-      key: "Dia_li",
+      title: "Địa lí",
+      key: "dia_li",
+      render: (_, record) => record.scores?.dia_li,
     },
     {
       title: "GDCD",
-      dataIndex: "gdcd",
       key: "gdcd",
+      render: (_, record) => record.scores?.gdcd,
     },
     {
-      title: "Ma ngoai ngu",
+      title: "Mã ngoại ngữ",
       dataIndex: "ma_ngoai_ngu",
       key: "ma_ngoai_ngu",
     },
   ];
+
   return (
     <div className="flex flex-col md:p-10 p-4 md:gap-10 gap-4">
       <div className="bg-slate-100 rounded-lg shadow-md md:p-8 p-4 flex items-start flex-col gap-4">
@@ -105,7 +107,7 @@ export const SearchScores = () => {
           loading={callScoresApiLoading}
           columns={columns}
           pagination={false}
-          rowKey={(record: IScores) => record?.sbd}
+          rowKey={(record) => record.sbd}
           size={"large"}
           scroll={{ x: "fit-content" }}
         />
