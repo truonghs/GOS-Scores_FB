@@ -97,7 +97,7 @@ export const SearchScores = () => {
           </Button>
         </div>
       </div>
-      <div className="bg-slate-100  rounded-lg shadow-md p-8 flex items-start flex-col gap-4">
+      <div className="bg-slate-100  rounded-lg shadow-md md:p-8 p-4 flex items-start flex-col gap-4">
         <div className="font-bold md:text-3xl text-xl">Detailed Scores</div>
         <Table
           className="w-full max-w-full"
