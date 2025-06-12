@@ -19,14 +19,6 @@ export const Sidebar: React.FC<Props> = ({ children }) => {
 
   const items: MenuItem[] = [
     {
-      key: PATH.dashboard,
-      icon: icons.dashboard,
-      label: "Dashboard",
-      disabled: true,
-
-      onClick: () => navigate(PATH.dashboard),
-    },
-    {
       key: PATH.search,
       icon: icons.search,
       label: "Search Scores",
@@ -37,6 +29,14 @@ export const Sidebar: React.FC<Props> = ({ children }) => {
       icon: icons.reports,
       label: "Report",
       onClick: () => navigate(PATH.reports),
+    },
+    {
+      key: PATH.dashboard,
+      icon: icons.dashboard,
+      label: "Dashboard",
+      disabled: true,
+
+      onClick: () => navigate(PATH.dashboard),
     },
     {
       key: PATH.settings,
